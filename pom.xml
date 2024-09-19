@@ -20,27 +20,33 @@
     </properties>
 
     <dependencies>
+        <!-- Web3j core dependency -->
         <dependency>
             <groupId>org.web3j</groupId>
             <artifactId>core</artifactId>
             <version>${web3j.version}</version>
         </dependency>
+        <!-- Logback dependency for logging -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback-classic.version}</version>
             <scope>runtime</scope>
         </dependency>
+        <!-- JUnit dependency for testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- Additional dependencies may be required based on your project -->
+        <!-- For example, if Greeter or other classes are in separate libraries, include them here -->
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Web3j Maven Plugin for Solidity contracts -->
             <plugin>
                 <groupId>org.web3j</groupId>
                 <artifactId>web3j-maven-plugin</artifactId>
@@ -54,6 +60,7 @@
                     </soliditySourceFiles>
                 </configuration>
             </plugin>
+            <!-- Exec Maven Plugin for running main class -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
